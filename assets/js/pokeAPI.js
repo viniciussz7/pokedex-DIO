@@ -3,7 +3,7 @@ const pokeApi = {}
 
 function convertPokemonApiToPokemonModel(pokemonDetail) {
     const pokemon = new PokemonModel()
-    pokemon.number = pokemonDetail.order
+    pokemon.number = pokemonDetail.id
     pokemon.name = pokemonDetail.name
     const types = pokemonDetail.types.map((types) => types.type.name)
     const [type] = types
